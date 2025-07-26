@@ -112,23 +112,54 @@ class LinkedList {
         }
         return string;
     }
+
+    insertAt(value, index) {
+        let count = 0;
+        if (index > this.size() || (this.head === null && index != 0)) console.error("Index exceeds list size")
+        else {
+            let tmp = this.head;
+            if (count == index) {
+                this.prepend(value)
+            } else {
+                while (tmp.next) {
+                    tmp = tmp.next
+                    count++;
+                    if (count == index) {
+                        let newNode = new Node(value, tmp);
+                        let prevNode = this.at(count-1);
+                        prevNode.next = newNode;
+                    }
+                }
+                if (++count == index) {
+                    this.append(value)
+                }
+            }
+        }
+
+    }
 } 
 
 
 const newList = new LinkedList();
-newList.append(1)
-newList.append(12)
-newList.prepend(15)
-console.log(newList.head)
-newList.prepend(16)
+// newList.append(1)
+// newList.append(12)
+// newList.prepend(15)
+// console.log(newList.head)
+// newList.prepend(16)
+// console.log(newList.size())
+// console.log(newList.getHead())
+// console.log(newList.getTail())
+// console.log(newList.at(0))
+// newList.pop()
+// console.log(newList.size())
+// console.log(newList.getTail())
+// console.log(newList.contains(15))
+// console.log(newList.find(2));
+// console.log(newList.toString())
+// console.log(newList.size())
+newList.insertAt(5,2);
 console.log(newList.size())
-console.log(newList.getHead())
-console.log(newList.getTail())
-console.log(newList.at(0))
-newList.pop()
-console.log(newList.size())
-console.log(newList.getTail())
-console.log(newList.contains(15))
-console.log(newList.find(2));
 console.log(newList.toString())
+newList.insertAt(5,0);
 console.log(newList.size())
+console.log(newList.toString())
