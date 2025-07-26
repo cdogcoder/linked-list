@@ -39,6 +39,18 @@ class LinkedList {
     getHead() {
         return this.head;
     }
+
+    getTail() {
+        if (this.head === null) return null;
+        else {
+            let tmp = this.head;
+            while (tmp.next) {
+                tmp = tmp.next;
+            }
+            return tmp;
+        }
+        
+    }
 } 
 
 
@@ -50,3 +62,4 @@ console.log(newList.head)
 newList.prepend(15)
 console.log(newList.size())
 console.log(newList.getHead())
+console.log(newList.getTail())
