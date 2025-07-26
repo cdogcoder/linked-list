@@ -167,8 +167,8 @@ class LinkedList {
 
 const newList = new LinkedList();
 newList.append(1)
-newList.append(12)
-newList.prepend(15)
+// newList.append(12)
+// newList.prepend(15)
 // console.log(newList.head)
 // newList.prepend(16)
 // console.log(newList.size())
@@ -182,17 +182,22 @@ newList.prepend(15)
 // console.log(newList.find(2));
 // console.log(newList.toString())
 // console.log(newList.size())
-newList.insertAt(5,2);
+// newList.insertAt(5,2);
 // console.log(newList.size())
 // console.log(newList.toString())
-newList.insertAt(5,0);
+// newList.insertAt(5,0);
+// console.log(newList.size())
+// console.log(newList.toString())
+// newList.removeAt(2);
+// console.log(newList.size())
+// console.log(newList.toString())
+// console.log(newList.removeAt(4));
 console.log(newList.size())
 console.log(newList.toString())
-newList.removeAt(2);
+newList.append(5)
+newList.pop()
 console.log(newList.size())
 console.log(newList.toString())
-console.log(newList.removeAt(4));
-console.log(newList.size())
-console.log(newList.toString())
+
 
 
