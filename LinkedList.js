@@ -54,6 +54,7 @@ export class LinkedList {
     at(index) {
         let count = 0;
         if (index > this.size() || this.head === null) return null;
+        else if (index < 0) console.error("Negative index provided");
         else {
             let tmp = this.head;
             if (count == index) return tmp;
@@ -120,6 +121,7 @@ export class LinkedList {
     insertAt(value, index) {
         let count = 0;
         if (index > this.size() || (this.head === null && index != 0)) console.error("Index exceeds list size")
+        else if (index < 0) console.error("Can not insert values at a negative index");
         else {
             let tmp = this.head;
             if (count == index) {
@@ -146,6 +148,7 @@ export class LinkedList {
         let count = 0;
         if (this.head === null) console.error("List is empty")
         else if (index >= this.size()) console.error("Unable to remove value at index greater than the list size")
+        else if (index < 0) console.error("Negative index provided");
         else {
             let tmp = this.head;
             if (count == index) {
@@ -163,3 +166,12 @@ export class LinkedList {
         }
     }
 } 
+
+const list = new LinkedList();
+
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
