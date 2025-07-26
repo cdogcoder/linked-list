@@ -1,1 +1,3 @@
 # linked-list
+
+Hey everyone! This is like my sixth or so project for the JavaScript course for TOP! Today, I will be implementing a linked list from scratch using JavaScript objects/classes. This might become my most challenging project yet, so I hope you all like it. As always (even though it might not happen in this project), any media used that is not my own will be linked (no pun intended!) here, please make sure to go show all the creators some love. With that said, thank you for viewing this repo and I hope you liked the project!
