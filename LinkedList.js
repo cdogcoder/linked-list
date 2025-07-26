@@ -98,6 +98,20 @@ class LinkedList {
             return null;
         }
     }
+
+    toString() {
+        let string = "";
+        if (this.head === null) return " null ";
+        else {
+            let tmp = this.head;
+            while (tmp.next) {
+                string += `( ${tmp.data} ) -> `;
+                tmp = tmp.next;
+            }
+            string += `( ${tmp.data} ) -> null`;
+        }
+        return string;
+    }
 } 
 
 
@@ -116,3 +130,5 @@ console.log(newList.size())
 console.log(newList.getTail())
 console.log(newList.contains(15))
 console.log(newList.find(2));
+console.log(newList.toString())
+console.log(newList.size())
