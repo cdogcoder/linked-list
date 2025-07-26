@@ -51,6 +51,20 @@ class LinkedList {
         }
         
     }
+    
+    at(index) {
+        let count = 0;
+        if (index > this.size() || this.head === null) return null;
+        else {
+            let tmp = this.head;
+            if (count == index) return tmp;
+            while (tmp.next) {
+                tmp = tmp.next;
+                count++;
+                if (count == index) return tmp;
+            }
+        }
+    }
 } 
 
 
@@ -59,7 +73,8 @@ newList.append(1)
 newList.append(12)
 newList.prepend(15)
 console.log(newList.head)
-newList.prepend(15)
+newList.prepend(16)
 console.log(newList.size())
 console.log(newList.getHead())
 console.log(newList.getTail())
+console.log(newList.at(0))
