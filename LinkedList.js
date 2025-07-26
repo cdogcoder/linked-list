@@ -83,6 +83,21 @@ class LinkedList {
             return false;
         }
     }
+
+    find(value) {
+        let count = 0;
+        if (this.head === null) return null;
+        else {
+            let tmp = this.head;
+            if (tmp.data == value) return count;
+            while (tmp.next) {
+                tmp = tmp.next;
+                count++;
+                if (tmp.data == value) return count;
+            }
+            return null;
+        }
+    }
 } 
 
 
@@ -100,3 +115,4 @@ newList.pop()
 console.log(newList.size())
 console.log(newList.getTail())
 console.log(newList.contains(15))
+console.log(newList.find(2));
