@@ -13,6 +13,14 @@ class LinkedList {
             tmp.next = new Node(value, null);
         }
     }
+
+    prepend(value) {
+        if (this.head === null) this.head = new Node(value, null);
+        else {
+            let tmp = new Node(value, this.head);
+            this.head = tmp;
+        }
+    }
 }
 
 
