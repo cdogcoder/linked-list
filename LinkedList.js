@@ -142,13 +142,34 @@ class LinkedList {
         }
 
     }
+
+    removeAt(index) {
+        let count = 0;
+        if (this.head === null) console.error("List is empty")
+        else if (index >= this.size()) console.error("Unable to remove value at index greater than the list size")
+        else {
+            let tmp = this.head;
+            if (count == index) {
+                this.head = this.at(++count);
+            } else {
+                while (tmp.next) {
+                    tmp = tmp.next;
+                    count++;
+                    if (count == index) {
+                        let prevNode = this.at(count-1);
+                        prevNode.next = tmp.next;
+                    }
+                }
+            }
+        }
+    }
 } 
 
 
 const newList = new LinkedList();
-// newList.append(1)
-// newList.append(12)
-// newList.prepend(15)
+newList.append(1)
+newList.append(12)
+newList.prepend(15)
 // console.log(newList.head)
 // newList.prepend(16)
 // console.log(newList.size())
@@ -163,8 +184,16 @@ const newList = new LinkedList();
 // console.log(newList.toString())
 // console.log(newList.size())
 newList.insertAt(5,2);
-console.log(newList.size())
-console.log(newList.toString())
+// console.log(newList.size())
+// console.log(newList.toString())
 newList.insertAt(5,0);
 console.log(newList.size())
 console.log(newList.toString())
+newList.removeAt(2);
+console.log(newList.size())
+console.log(newList.toString())
+console.log(newList.removeAt(4));
+console.log(newList.size())
+console.log(newList.toString())
+
+
