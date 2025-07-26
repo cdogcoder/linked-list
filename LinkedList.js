@@ -67,8 +67,13 @@ class LinkedList {
     }
 
     pop() {
-        const secondToLastNode = this.at(this.size()-2);
-        secondToLastNode.next = null;
+        if (this.head === null) console.error("List is empty")
+        if (this.size() == 1) {
+            this.head.next = null;
+        } else {
+            const secondToLastNode = this.at(this.size()-2);
+            secondToLastNode.next = null;
+        }
     }
 
     contains(value) {
