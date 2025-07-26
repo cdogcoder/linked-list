@@ -70,6 +70,19 @@ class LinkedList {
         const secondToLastNode = this.at(this.size()-2);
         secondToLastNode.next = null;
     }
+
+    contains(value) {
+        if (this.head === null) return false;
+        else {
+            let tmp = this.head;
+            if (tmp.data == value) return true;
+            while (tmp.next) {
+                tmp = tmp.next;
+                if (tmp.data == value) return true;
+            }
+            return false;
+        }
+    }
 } 
 
 
@@ -86,3 +99,4 @@ console.log(newList.at(0))
 newList.pop()
 console.log(newList.size())
 console.log(newList.getTail())
+console.log(newList.contains(15))
