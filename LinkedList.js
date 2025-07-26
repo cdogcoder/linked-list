@@ -33,15 +33,20 @@ class LinkedList {
                 count++;
             }
         }
-        return count;  
+        return count;
     }
 
-}
+    getHead() {
+        return this.head;
+    }
+} 
 
 
 const newList = new LinkedList();
 newList.append(1)
 newList.append(12)
 newList.prepend(15)
-console.log(newList.head.next.next)
+console.log(newList.head)
+newList.prepend(15)
 console.log(newList.size())
+console.log(newList.getHead())
