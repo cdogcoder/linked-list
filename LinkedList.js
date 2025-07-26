@@ -21,10 +21,27 @@ class LinkedList {
             this.head = tmp;
         }
     }
+
+    size() {
+        let count = 0;
+        if (this.head === null) return count;
+        else {
+            let tmp = this.head;
+            count++;
+            while (tmp.next) {
+                tmp = tmp.next;
+                count++;
+            }
+        }
+        return count;  
+    }
+
 }
 
 
 const newList = new LinkedList();
 newList.append(1)
 newList.append(12)
+newList.prepend(15)
 console.log(newList.head.next.next)
+console.log(newList.size())
