@@ -1,6 +1,6 @@
 import Node from "./Node.js";
 
-class LinkedList {
+export class LinkedList {
     constructor() {
         this.head = null;
     }
@@ -163,41 +163,3 @@ class LinkedList {
         }
     }
 } 
-
-
-const newList = new LinkedList();
-newList.append(1)
-// newList.append(12)
-// newList.prepend(15)
-// console.log(newList.head)
-// newList.prepend(16)
-// console.log(newList.size())
-// console.log(newList.getHead())
-// console.log(newList.getTail())
-// console.log(newList.at(0))
-// newList.pop()
-// console.log(newList.size())
-// console.log(newList.getTail())
-// console.log(newList.contains(15))
-// console.log(newList.find(2));
-// console.log(newList.toString())
-// console.log(newList.size())
-// newList.insertAt(5,2);
-// console.log(newList.size())
-// console.log(newList.toString())
-// newList.insertAt(5,0);
-// console.log(newList.size())
-// console.log(newList.toString())
-// newList.removeAt(2);
-// console.log(newList.size())
-// console.log(newList.toString())
-// console.log(newList.removeAt(4));
-console.log(newList.size())
-console.log(newList.toString())
-newList.append(5)
-newList.pop()
-console.log(newList.size())
-console.log(newList.toString())
-
-
-
