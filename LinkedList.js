@@ -65,6 +65,11 @@ class LinkedList {
             }
         }
     }
+
+    pop() {
+        const secondToLastNode = this.at(this.size()-2);
+        secondToLastNode.next = null;
+    }
 } 
 
 
@@ -78,3 +83,6 @@ console.log(newList.size())
 console.log(newList.getHead())
 console.log(newList.getTail())
 console.log(newList.at(0))
+newList.pop()
+console.log(newList.size())
+console.log(newList.getTail())
